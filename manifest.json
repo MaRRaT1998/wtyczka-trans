@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Trans.eu Helper",
+  "version": "0.0.1",
+  "description": "Panel + przycisk mapy dla ofert na Trans.eu",
+  "content_scripts": [
+    {
+      "matches": ["https://*.trans.eu/*", "https://trans.eu/*"],
+      "js": [
+        "src/content/selectors.js",
+        "src/state/vehicle-source.js",
+        "src/content/offers-scanner.js",
+        "src/content/route-builder.js",
+        "src/content/map-button.js",
+        "src/ui/floating-toggle.js",
+        "src/content/init.js"
+      ],
+      "css": [
+        "src/content/map-button.css",
+        "src/ui/panel.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
